@@ -1,10 +1,26 @@
-import { useState } from 'react';
+import { useAppDispatch, useAppSelector } from './redux/hooks';
+import { fetchRestaurantData } from './redux/slices/restaurants';
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const dispatch = useAppDispatch();
+  const { data, hasError, isLoading } = useAppSelector(
+    (state) => state.restaurants
+  );
 
-  return <div className="App">stuff</div>;
+  useEffect(() => {
+    dispatch(fetchRestaurantData());
+  }, []);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
+  if (isLoading) return <p>Loading...</p>;
+  if (hasError) return <p>ERROR!!!</p>;
+
+  return <div className="App">{data?.data?.length} results found.</div>;
 }
 
 export default App;
