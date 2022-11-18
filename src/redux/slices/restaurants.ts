@@ -1,5 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import client from '../../axios';
+
+import getFormattedData from '../../utils/getFormattedData';
 // import type { PayloadAction } from '@reduxjs/toolkit';
 
 // export interface Restaurant {}
@@ -10,7 +12,7 @@ export const fetchRestaurantData = createAsyncThunk(
   async () => {
     const data = await client.get('/cards');
 
-    return data;
+    return getFormattedData(data);
   }
 );
 

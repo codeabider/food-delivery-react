@@ -1,0 +1,28 @@
+.main-container .cards-container .card .card__rating {
+  background-color: #cecece;
+  border-radius: 5px;
+  display: inline-block;
+  max-width: 200px;
+  padding: 5px;
+  text-align: center;
+}
+
+.main-container .cards-container .card .card__rating.green {
+  background-color: #4a9801;
+}
+
+.main-container .cards-container .card .card__rating.light-green {
+  background-color: #c6ff90;
+}
+
+.main-container .cards-container .card .card__rating.yellow {
+  background-color: #fdff90;
+}
+
+.main-container .cards-container .card .card__rating.orange {
+  background-color: #ffc990;
+}
+
+.main-container .cards-container .card .card__rating.red {
+  background-color: #ff9090;
+}
