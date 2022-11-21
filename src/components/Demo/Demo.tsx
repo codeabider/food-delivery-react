@@ -1,23 +1,23 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import debounce from '../../utils/debounce';
-import throttle from '../../utils/throttle';
-import advancedThrottle from '../../utils/advancedThrottle';
-import memoize from '../../utils/memoize';
+import debounce from '../../utils/general/debounce';
+import throttle from '../../utils/general/throttle';
+import advancedThrottle from '../../utils/general/advancedThrottle';
+import memoize from '../../utils/general/memoize';
 
-import copyDeepDemo from '../../utils/copyDeep.js';
-import pipeDemo from '../../utils/pipe.js';
-import composeDemo from '../../utils/compose.js';
-import sumCurryDemo from '../../utils/curry.js';
+import copyDeepDemo from '../../utils/general/copyDeep.js';
+import pipeDemo from '../../utils/general/pipe.js';
+import composeDemo from '../../utils/general/compose.js';
+import sumCurryDemo from '../../utils/general/curry.js';
 
-import forEachDemo from '../../utils/forEach.js';
-import mapDemo from '../../utils/map.js';
-import filterDemo from '../../utils/filter.js';
-import reduceDemo from '../../utils/reduce.js';
-import flattenDemo from '../../utils/flatten.js';
-import callApplyBindPolyfillsDemo from '../../utils/polyfills.js';
-import promiseAllDemo from '../../utils/promiseAll.js';
+import forEachDemo from '../../utils/general/forEach.js';
+import mapDemo from '../../utils/general/map.js';
+import filterDemo from '../../utils/general/filter.js';
+import reduceDemo from '../../utils/general/reduce.js';
+import flattenDemo from '../../utils/general/flatten.js';
+import callApplyBindPolyfillsDemo from '../../utils/general/polyfills.js';
+import promiseAllDemo from '../../utils/general/promiseAll.js';
 
 const Demo = () => {
   useEffect(() => {
