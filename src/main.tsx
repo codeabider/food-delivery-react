@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Home from './components/Home/Home';
+import Demo from './components/Demo/Demo';
 
 import { store } from './redux/store';
 import './index.css';
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />
+  },
+  {
+    path: '/demo',
+    element: <Demo />
   }
 ]);
 

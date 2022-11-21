@@ -1,4 +1,4 @@
-const copyDeep = (entity) => {
+export const copyDeep = (entity) => {
   const isOther = (entity) => typeof entity !== 'object';
   const isArray = Array.isArray(entity);
   const isObject = !isOther(entity) && !Array.isArray(entity);
@@ -30,4 +30,14 @@ const copyDeep = (entity) => {
   }
 };
 
-export default copyDeep;
+const run = () => {
+  const obj = { a: { b: 1 }, c: { d: { e: 2 } } };
+
+  const objCpy = copyDeep(obj);
+  objCpy.a.b = 11;
+  objCpy.c.d.e = 22;
+
+  console.log({ obj, objCpy });
+};
+
+export default run;
