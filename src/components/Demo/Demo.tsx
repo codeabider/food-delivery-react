@@ -9,7 +9,8 @@ import memoize from '../../utils/general/memoize';
 import copyDeepDemo from '../../utils/general/copyDeep.js';
 import pipeDemo from '../../utils/general/pipe.js';
 import composeDemo from '../../utils/general/compose.js';
-import sumCurryDemo from '../../utils/general/curry.js';
+import infiniteSumCurryDemo from '../../utils/general/curry.js';
+import returnCurriedDemo from '../../utils/general/returnCurried.js';
 
 import forEachDemo from '../../utils/general/forEach.js';
 import mapDemo from '../../utils/general/map.js';
@@ -19,13 +20,17 @@ import flattenDemo from '../../utils/general/flatten.js';
 import callApplyBindPolyfillsDemo from '../../utils/general/polyfills.js';
 import promiseAllDemo from '../../utils/general/promiseAll.js';
 
+import closureCounterDemo from '../../utils/general/counter.js';
+import runOnceDemo from '../../utils/general/runOnce.js';
+
 const Demo = () => {
   useEffect(() => {
     // uncomment to run specific demo
     // copyDeepDemo();
     // pipeDemo();
     // composeDemo();
-    // sumCurryDemo();
+    // infiniteSumCurryDemo();
+    // returnCurriedDemo();
     // forEachDemo();
     // mapDemo();
     // filterDemo();
@@ -33,6 +38,8 @@ const Demo = () => {
     // flattenDemo();
     // callApplyBindPolyfillsDemo();
     // promiseAllDemo();
+    // closureCounterDemo();
+    runOnceDemo();
   }, []);
 
   const onSearch = debounce((e: any) => {
